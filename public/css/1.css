@@ -34,7 +34,7 @@ ul.navbar-nav {
 
 nav {
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   align-items: center;
   height: 60px;
   padding: 20px;  
