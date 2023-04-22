@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Uploadation</title>
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css"   href="/css/4.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo-container">
+        <img class="logo"  src="images/logo.png" alt="My Website">
+      </div>
+      <div class="text-container">
+        <h1> |&nbsp; &nbsp;EY DATA PRIVACY PORTAL</h1>
+      </div>
+    </nav>
+    </header>
+
+    <input type="hidden" name="page" value="4"> 
+    <div class="container">
+      <div class="box">
+
+
+      
+    <h1><U>You need to have a GAP Assessment!</U></h1>
+    <h2>Do you have the following policies:</h2> 
+
+    <div class="question">
+    <h3><label>1. Information Security</label></h3>
+    <div class="radio-buttons">
+    <input type="radio" name="q1" value="yes" > Yes &nbsp; &nbsp; &nbsp;
+    <input type="radio" name="q1" value="no" > No
+    </div>
+    </div>
+    <div class="question">
+    <h3><label>2. Data Protection</label></h3>
+    <div class="radio-buttons">
+    <input type="radio" name="q2" value="yes" > Yes &nbsp; &nbsp; &nbsp;
+    <input type="radio" name="q2" value="no" > No
+    </div>
+    </div>
+    <div class="question">
+      <h3><label>3. Access Management</label></h3>
+      <div class="radio-buttons">
+      <input type="radio" name="q3" value="yes" > Yes &nbsp; &nbsp; &nbsp;
+      <input type="radio" name="q3" value="no" > No
+      </div>
+      </div>
+    <div class="question">
+    <h3><label>4. Privacy</label></h3>
+    <div class="radio-buttons">
+    <input type="radio" name="q4" value="yes" > Yes &nbsp; &nbsp; &nbsp;
+    <input type="radio" name="q4" value="no" > No
+    </div>
+    </div>
+    <div class="question">
+      <h3><label>5. Cookies</label></h3>
+      <div class="radio-buttons">
+      <input type="radio" name="q5" value="yes" > Yes &nbsp; &nbsp; &nbsp;
+      <input type="radio" name="q5" value="no" > No
+      </div>
+      </div>
+      <br>
+    
+    
+    <br>
+    <center><h2>Please upload the available files, choose all the files at once:</h2>   
+    <form action="/upload" method="POST" enctype="multipart/form-data" id="myform">
+     <input class="choose-button" type="file" name="files" multiple>
+     <br>
+     <br>
+     <button type="submit" name="submit" value="submit">Upload Files</button>
+     <br><br>
+     <button type="submit" name="previous" value="previous">Previous</button>
+     </form>
+    </center> 
+
+    </div>
+    </div>
+    <script>
+      document.getElementById('myform').addEventListener('submit', function(event) {
+          var files = document.querySelector('[type=file]').files;
+          var allowedTypes = ['application/pdf', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+          var fileTypeError = false;
+  
+          for (var i = 0; i < files.length; i++) {
+              if (!allowedTypes.includes(files[i].type)) {
+                  fileTypeError = true;
+                  break;
+              }
+          }
+  
+          if (fileTypeError) {
+              alert('Invalid file type. Only PDF, Excel, and Word documents are allowed.');
+              event.preventDefault();
+          }
+          if(files.length === 0){
+            alert('No file uploaded please upload at least one')
+            event.preventDefault();
+          }
+      });
+  </script>
+  
+</body>
+
+</html>

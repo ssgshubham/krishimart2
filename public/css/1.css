@@ -1,0 +1,92 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #DCE1DE;
+}
+
+.heroImg {
+  width: 100%;
+  height: auto;
+  align-items: right;
+  justify-content: right;
+}
+
+#google_translate_element {
+  text-align: center;
+}
+
+.cursor-pointer:hover {
+  cursor: pointer;
+}
+
+.cursor-disabled {
+  cursor: not-allowed;
+  background: #A2BDAD;
+}
+
+.navbar-nav li {
+  display: inline;
+}
+
+ul.navbar-nav {
+  display: flex;
+  list-style: none;
+}
+
+nav {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 60px;
+  padding: 20px;  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  flex-direction: column;
+  height: 900px;
+}
+
+.column-1 {
+  float: left;
+  width: 40%;
+  margin-left: 0px;
+  margin-right: 200px;
+}
+
+.column-2 {
+  float: right;
+  width: 40%;
+  margin-right: 40px;
+}
+
+button {
+  text-decoration: none;
+  background: none;
+  color: #49A078;
+  padding: 14px 16px;
+  border-radius: 28px;
+  cursor: pointer;
+  border: 2px solid #49A078;
+}
+
+button:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #49A078;
+}
+
+h1{
+  font-size: 60px;
+}
+
+h2{
+  font-size: 40px;
+}
